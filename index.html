@@ -1,254 +1,597 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MoySoporteTec - Soporte técnico, reparación de computadoras, redes, cámaras de seguridad y venta de tecnología.">
-  <title>MoySoporteTec | Soporte y Tecnología</title>
+
+  <title>MoySoporteTec | Soporte Técnico y Tecnología</title>
+
+  <meta name="description" content="MoySoporteTec ofrece soporte técnico, reparación de computadoras, redes Wi-Fi, cámaras de seguridad y venta de tecnología.">
+
   <style>
-    :root{
-      --bg:#07111f; --bg2:#0b1728; --card:#101f33; --text:#eef6ff;
-      --muted:#a9bad0; --primary:#19b5fe; --primary2:#006dff;
-      --accent:#55e6a5; --border:rgba(255,255,255,.09);
-      --shadow:0 18px 45px rgba(0,0,0,.28);
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:Inter,Segoe UI,Arial,sans-serif;background:linear-gradient(180deg,var(--bg),#081321 50%,#06101d);color:var(--text);line-height:1.6}
-    a{text-decoration:none;color:inherit}
-    .container{width:min(1120px,92%);margin:auto}
-    header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(7,17,31,.84);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-    nav{height:76px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:1.45rem;font-weight:900;letter-spacing:-.5px}
-    .logo span{color:var(--primary)}
-    .menu{display:flex;gap:26px;align-items:center}
-    .menu a{color:#dce9f7;font-weight:600;font-size:.95rem}
-    .menu a:hover{color:var(--primary)}
-    .menu-btn{display:none;background:none;border:0;color:white;font-size:1.7rem;cursor:pointer}
-    .hero{padding:150px 0 90px;overflow:hidden;position:relative}
-    .hero:before{content:"";position:absolute;width:520px;height:520px;background:rgba(0,109,255,.18);filter:blur(100px);border-radius:50%;right:-180px;top:80px}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
-    .badge{display:inline-block;border:1px solid rgba(25,181,254,.35);background:rgba(25,181,254,.08);color:#86dfff;padding:7px 13px;border-radius:999px;font-size:.84rem;font-weight:700;margin-bottom:18px}
-    h1{font-size:clamp(2.7rem,6vw,5rem);line-height:1.02;letter-spacing:-3px;margin-bottom:20px}
-    h1 span{background:linear-gradient(90deg,var(--primary),#7d8cff);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero p{font-size:1.12rem;color:var(--muted);max-width:620px;margin-bottom:30px}
-    .buttons{display:flex;gap:13px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;font-weight:800;border:1px solid var(--border);transition:.2s;cursor:pointer}
-    .btn-primary{background:linear-gradient(135deg,var(--primary2),var(--primary));color:white;border:none}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,109,255,.3)}
-    .btn-outline:hover{background:rgba(255,255,255,.06)}
-    .hero-card{background:linear-gradient(145deg,rgba(18,39,65,.95),rgba(10,25,43,.95));border:1px solid var(--border);border-radius:28px;padding:28px;box-shadow:var(--shadow);position:relative}
-    .tech-icon{height:250px;border-radius:20px;background:radial-gradient(circle at 50% 45%,rgba(25,181,254,.28),transparent 35%),linear-gradient(135deg,#102a47,#071321);display:grid;place-items:center;font-size:7rem;border:1px solid rgba(25,181,254,.15)}
-    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
-    .stat{background:rgba(255,255,255,.04);padding:15px;border-radius:14px;text-align:center}
-    .stat strong{display:block;font-size:1.3rem}.stat small{color:var(--muted)}
-    section{padding:88px 0}
-    .section-head{text-align:center;max-width:700px;margin:0 auto 42px}
-    .section-head h2{font-size:2.25rem;margin-bottom:9px;letter-spacing:-1px}
-    .section-head p{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:rgba(16,31,51,.75);border:1px solid var(--border);border-radius:20px;padding:25px;transition:.25s}
-    .card:hover{transform:translateY(-5px);border-color:rgba(25,181,254,.35)}
-    .icon{font-size:2rem;margin-bottom:14px}
-    .card h3{margin-bottom:8px}.card p{color:var(--muted);font-size:.95rem}
-    .products{grid-template-columns:repeat(3,1fr)}
-    .product{overflow:hidden;padding:0}
-    .product-img{height:170px;display:grid;place-items:center;font-size:5rem;background:linear-gradient(135deg,#102b49,#081523)}
-    .product-body{padding:21px}.price{color:var(--accent);font-weight:900;font-size:1.2rem;margin:8px 0 15px}
-    .tag{display:inline-block;font-size:.72rem;padding:4px 8px;border-radius:999px;background:rgba(85,230,165,.1);color:var(--accent);font-weight:800}
-    .why{background:rgba(255,255,255,.025);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-    .why-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:center}
-    .why-box{background:linear-gradient(145deg,#0d2743,#091827);border:1px solid var(--border);border-radius:25px;padding:32px}
-    .checks{display:grid;gap:14px;margin-top:22px}
-    .check{display:flex;gap:12px;align-items:flex-start}.check b{color:var(--accent)}.check span{color:var(--muted)}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-    .contact-info{display:grid;gap:14px}
-    .contact-item{padding:20px;border:1px solid var(--border);border-radius:17px;background:rgba(255,255,255,.03)}
-    .contact-item strong{display:block;margin-bottom:4px}.contact-item span{color:var(--muted)}
-    form{display:grid;gap:13px}
-    input,textarea{width:100%;padding:14px 15px;border-radius:12px;border:1px solid var(--border);background:#091625;color:white;font:inherit;outline:none}
-    input:focus,textarea:focus{border-color:var(--primary)}
-    textarea{min-height:130px;resize:vertical}
-    footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted)}
-    .footer-flex{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    .social{display:flex;gap:15px}.social a:hover{color:var(--primary)}
-    .wa{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;font-size:1.7rem;box-shadow:0 10px 30px rgba(37,211,102,.3);z-index:90}
-    @media(max-width:850px){
-      .menu{display:none;position:absolute;top:76px;left:0;right:0;background:#081321;padding:18px 4%;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--border)}
-      .menu.open{display:flex}.menu-btn{display:block}
-      .hero-grid,.why-grid,.contact{grid-template-columns:1fr}
-      .grid,.products{grid-template-columns:1fr 1fr}
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+      line-height: 1.6;
     }
-    @media(max-width:560px){
-      .grid,.products{grid-template-columns:1fr}
-      h1{letter-spacing:-2px}
-      section{padding:65px 0}
-      .hero{padding-top:125px}
+
+    header {
+      background: #071a2b;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,.2);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #00aaff;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    nav a:hover {
+      color: #00aaff;
+    }
+
+    .hero {
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #071a2b, #0066aa);
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #00d4ff;
+    }
+
+    .hero p {
+      font-size: 21px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+    }
+
+    .btn-email {
+      background: white;
+      color: #0066aa;
+    }
+
+    .btn-email:hover {
+      background: #eaf6ff;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #071a2b;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      transition: .3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #0066aa;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      margin-bottom: 15px;
+      color: #555;
+      font-size: 17px;
+    }
+
+    .contact {
+      background: #071a2b;
+      color: white;
+    }
+
+    .contact .section-title h2 {
+      color: white;
+    }
+
+    .contact .section-title p {
+      color: #cbd5df;
+    }
+
+    .contact-box {
+      max-width: 750px;
+      margin: auto;
+      background: #102b43;
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .contact-item {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+
+    .contact-item a {
+      color: #00d4ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-buttons {
+      margin-top: 30px;
+    }
+
+    footer {
+      background: #04101c;
+      color: #aaa;
+      text-align: center;
+      padding: 25px 20px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 5px 20px rgba(0,0,0,.3);
+      z-index: 2000;
+      transition: .3s;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1);
+    }
+
+    @media (max-width: 900px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 5px 7px;
+        display: inline-block;
+      }
+
+      .hero {
+        min-height: 500px;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 50px 15px;
+      }
     }
   </style>
 </head>
+
 <body>
-<header>
-  <nav class="container">
-    <a href="#inicio" class="logo">Moy<span>SoporteTec</span></a>
-    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
-    <div class="menu" id="menu">
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#productos">Productos</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
-    </div>
-  </nav>
-</header>
 
-<main>
+  <!-- MENÚ -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        Moy<span>SoporteTec</span>
+      </div>
+
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- INICIO -->
   <section class="hero" id="inicio">
-    <div class="container hero-grid">
-      <div>
-        <div class="badge">TECNOLOGÍA • SOPORTE • SOLUCIONES</div>
-        <h1>Tu tecnología,<br><span>en buenas manos.</span></h1>
-        <p>En MoySoporteTec ofrecemos soporte técnico, mantenimiento, reparación, redes, cámaras de seguridad y soluciones tecnológicas para hogares y negocios.</p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="#contacto">Solicitar servicio</a>
-          <a class="btn btn-outline" href="#productos">Ver productos</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="tech-icon">💻</div>
-        <div class="stats">
-          <div class="stat"><strong>14+</strong><small>Años de experiencia</small></div>
-          <div class="stat"><strong>24/7</strong><small>Atención</small></div>
-          <div class="stat"><strong>TI</strong><small>Especialistas</small></div>
-        </div>
+    <div class="hero-content">
+
+      <h1>
+        <span>Moy</span>SoporteTec
+      </h1>
+
+      <p>
+        Soporte técnico, mantenimiento y soluciones de tecnología
+        para hogares y negocios.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          class="btn btn-whatsapp"
+          href="https://wa.me/525520692796?text=Hola%2C%20quiero%20solicitar%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20MoySoporteTec."
+          target="_blank">
+          📱 WhatsApp
+        </a>
+
+        <a
+          class="btn btn-email"
+          href="mailto:moysoportetec@gmail.com">
+          📧 Enviar correo
+        </a>
+
       </div>
     </div>
   </section>
 
+  <!-- SERVICIOS -->
   <section id="servicios">
-    <div class="container">
-      <div class="section-head">
-        <h2>Servicios profesionales</h2>
-        <p>Soluciones para mantener tus equipos funcionando y tu negocio conectado.</p>
-      </div>
-      <div class="grid">
-        <article class="card"><div class="icon">🛠️</div><h3>Soporte técnico</h3><p>Diagnóstico, mantenimiento y solución de problemas de computadoras, laptops y periféricos.</p></article>
-        <article class="card"><div class="icon">💻</div><h3>Reparación de equipos</h3><p>Optimización, limpieza, instalación de sistemas, cambio de componentes y recuperación de rendimiento.</p></article>
-        <article class="card"><div class="icon">📡</div><h3>Redes y Wi-Fi</h3><p>Configuración de routers, redes cableadas e inalámbricas, conectividad y puesta a punto.</p></article>
-        <article class="card"><div class="icon">📹</div><h3>Cámaras de seguridad</h3><p>Instalación y configuración de sistemas de videovigilancia para hogares y negocios.</p></article>
-        <article class="card"><div class="icon">🖥️</div><h3>Venta de tecnología</h3><p>Computadoras, laptops, memorias, cables, cargadores, accesorios y componentes.</p></article>
-        <article class="card"><div class="icon">⚙️</div><h3>Actualizaciones</h3><p>Instalación de SSD, RAM y otros componentes para mejorar velocidad y productividad.</p></article>
-      </div>
-    </div>
-  </section>
 
-  <section id="productos">
     <div class="container">
-      <div class="section-head">
-        <h2>Productos destacados</h2>
-        <p>Agrega aquí tus productos disponibles y cambia precios o información cuando quieras.</p>
-      </div>
-      <div class="grid products">
-        <article class="card product"><div class="product-img">💻</div><div class="product-body"><span class="tag">OFERTA</span><h3>Laptops y computadoras</h3><p>Equipos para trabajo, estudio y uso diario.</p><div class="price">Consultar precio</div><a class="btn btn-primary" href="#contacto">Comprar</a></div></article>
-        <article class="card product"><div class="product-img">💾</div><div class="product-body"><span class="tag">COMPONENTES</span><h3>Memorias RAM y SSD</h3><p>Actualiza tu equipo y mejora su rendimiento.</p><div class="price">Consultar precio</div><a class="btn btn-primary" href="#contacto">Comprar</a></div></article>
-        <article class="card product"><div class="product-img">🔌</div><div class="product-body"><span class="tag">ACCESORIOS</span><h3>Cables y cargadores</h3><p>USB, USB-C, cargadores y accesorios tecnológicos.</p><div class="price">Consultar precio</div><a class="btn btn-primary" href="#contacto">Comprar</a></div></article>
-      </div>
-    </div>
-  </section>
 
-  <section class="why" id="nosotros">
-    <div class="container why-grid">
-      <div>
-        <div class="badge">¿POR QUÉ MOYSOPORTETEC?</div>
-        <h2>Experiencia y atención personalizada.</h2>
-        <p style="color:var(--muted);margin-top:12px">Trabajamos para que tus equipos y servicios tecnológicos funcionen de forma confiable, segura y eficiente.</p>
+      <div class="section-title">
+        <h2>Nuestros Servicios</h2>
+        <p>Soluciones tecnológicas para tus necesidades.</p>
       </div>
-      <div class="why-box">
-        <div class="checks">
-          <div class="check"><b>✓</b><div><strong>Diagnóstico profesional</strong><br><span>Identificamos el problema antes de realizar el servicio.</span></div></div>
-          <div class="check"><b>✓</b><div><strong>Soluciones a tu medida</strong><br><span>Recomendaciones de acuerdo con tus necesidades y presupuesto.</span></div></div>
-          <div class="check"><b>✓</b><div><strong>Atención para hogares y negocios</strong><br><span>Soporte en sitio y soluciones para pequeñas empresas.</span></div></div>
-          <div class="check"><b>✓</b><div><strong>Servicio confiable</strong><br><span>Enfocados en calidad, rapidez y resolución de problemas.</span></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section id="contacto">
-    <div class="container">
-      <div class="section-head">
-        <h2>Contáctanos</h2>
-        <p>Cuéntanos qué necesitas y nos pondremos en contacto contigo.</p>
-      </div>
-      <div class="contact">
-        <div class="contact-info">
-          <div class="contact-item"><strong>📲 WhatsApp</strong><span id="phoneText">Agrega aquí tu número</span></div>
-          <div class="contact-item"><strong>📧 Correo</strong><span>contacto@moysoportetec.com</span></div>
-          <div class="contact-item"><strong>📍 Servicio</strong><span>Atención en sitio y remota</span></div>
-          <div class="contact-item"><strong>🕘 Horario</strong><span>Lunes a sábado · 9:00 a 18:00</span></div>
-        </div>
+      <div class="services">
+
         <div class="card">
-          <form id="contactForm">
-            <input id="name" type="text" placeholder="Tu nombre" required>
-            <input id="email" type="email" placeholder="Tu correo" required>
-            <textarea id="message" placeholder="¿Qué servicio necesitas?" required></textarea>
-            <button class="btn btn-primary" type="submit">Enviar solicitud</button>
-          </form>
-          <p id="formMsg" style="color:var(--muted);margin-top:12px;font-size:.9rem"></p>
+          <div class="icon">💻</div>
+          <h3>Soporte Técnico</h3>
+          <p>
+            Diagnóstico, mantenimiento y solución de problemas
+            en computadoras y equipos tecnológicos.
+          </p>
+
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/525520692796?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Soporte%20T%C3%A9cnico."
+            target="_blank">
+            Solicitar servicio
+          </a>
         </div>
+
+        <div class="card">
+          <div class="icon">🔧</div>
+          <h3>Reparación de Computadoras</h3>
+          <p>
+            Reparación, mantenimiento preventivo y correctivo
+            de computadoras y laptops.
+          </p>
+
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/525520692796?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Reparaci%C3%B3n%20de%20Computadoras."
+            target="_blank">
+            Solicitar servicio
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="icon">📡</div>
+          <h3>Redes y Wi-Fi</h3>
+          <p>
+            Configuración de redes, Wi-Fi, routers y conectividad
+            para hogares y negocios.
+          </p>
+
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/525520692796?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Redes%20y%20Wi-Fi."
+            target="_blank">
+            Solicitar servicio
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="icon">📹</div>
+          <h3>Cámaras de Seguridad</h3>
+          <p>
+            Instalación y configuración de sistemas de
+            videovigilancia.
+          </p>
+
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/525520692796?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20C%C3%A1maras%20de%20Seguridad."
+            target="_blank">
+            Solicitar servicio
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="icon">🖥️</div>
+          <h3>Venta de Tecnología</h3>
+          <p>
+            Computadoras, laptops, memoria RAM, SSD, cables,
+            cargadores y accesorios.
+          </p>
+
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/525520692796?text=Hola%2C%20me%20interesa%20conocer%20los%20productos%20disponibles."
+            target="_blank">
+            Ver productos
+          </a>
+        </div>
+
+        <div class="card">
+          <div class="icon">💾</div>
+          <h3>Actualización de Equipos</h3>
+          <p>
+            Instalación de RAM, SSD y mejoras para aumentar
+            el rendimiento de tu computadora.
+          </p>
+
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/525520692796?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20actualizaci%C3%B3n%20de%20mi%20computadora."
+            target="_blank">
+            Solicitar información
+          </a>
+        </div>
+
       </div>
     </div>
   </section>
-</main>
 
-<a class="wa" id="waBtn" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+  <!-- NOSOTROS -->
+  <section class="about" id="nosotros">
 
-<footer>
-  <div class="container footer-flex">
-    <div>© <span id="year"></span> <strong>MoySoporteTec</strong>. Todos los derechos reservados.</div>
-    <div class="social"><a href="#" aria-label="Facebook">Facebook</a><a href="#" aria-label="Instagram">Instagram</a><a href="#" aria-label="TikTok">TikTok</a></div>
-  </div>
-</footer>
+    <div class="container">
 
-<script>
-  // ===== CONFIGURA AQUÍ TUS DATOS =====
-  const CONFIG = {
-    whatsapp: "525500000000", // Ejemplo: 525512345678 (México, sin + ni espacios)
-    whatsappText: "Hola MoySoporteTec, quiero solicitar información sobre sus servicios.",
-    phoneDisplay: "Agrega aquí tu número",
-  };
+      <div class="section-title">
+        <h2>Sobre MoySoporteTec</h2>
+        <p>Soluciones tecnológicas confiables.</p>
+      </div>
 
-  document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById("phoneText").textContent = CONFIG.phoneDisplay;
+      <div class="about-content">
 
-  const waBtn = document.getElementById("waBtn");
-  if (CONFIG.whatsapp && CONFIG.whatsapp !== "525500000000") {
-    waBtn.href = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(CONFIG.whatsappText);
-  } else {
-    waBtn.href = "#contacto";
-  }
+        <p>
+          En <strong>MoySoporteTec</strong> ofrecemos soluciones
+          de soporte técnico y mantenimiento para computadoras,
+          redes y equipos tecnológicos.
+        </p>
 
-  const menuBtn = document.getElementById("menuBtn");
-  const menu = document.getElementById("menu");
-  menuBtn.addEventListener("click", () => menu.classList.toggle("open"));
-  document.querySelectorAll(".menu a").forEach(a => a.addEventListener("click", () => menu.classList.remove("open")));
+        <p>
+          Nuestro objetivo es ayudarte a mantener tus equipos
+          funcionando correctamente y ofrecerte soluciones
+          prácticas para tus necesidades tecnológicas.
+        </p>
 
-  document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    const formMsg = document.getElementById("formMsg");
+        <p>
+          Atención para hogares, pequeños negocios y empresas.
+        </p>
 
-    if (CONFIG.whatsapp === "525500000000") {
-      formMsg.textContent = "Formulario listo. Configura tu número de WhatsApp en CONFIG para recibir las solicitudes.";
-      return;
-    }
+      </div>
 
-    const text = `Hola MoySoporteTec.%0A%0ANombre: ${encodeURIComponent(name)}%0ACorreo: ${encodeURIComponent(email)}%0ASolicitud: ${encodeURIComponent(message)}`;
-    window.open(`https://wa.me/${CONFIG.whatsapp}?text=${text}`, "_blank");
-    formMsg.textContent = "Abriendo WhatsApp...";
-  });
-</script>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>Contáctanos</h2>
+
+        <p>
+          Estamos listos para ayudarte.
+        </p>
+
+      </div>
+
+      <div class="contact-box">
+
+        <div class="contact-item">
+          📱 WhatsApp:
+          <a
+            href="https://wa.me/525520692796"
+            target="_blank">
+            55 2069 2796
+          </a>
+        </div>
+
+        <div class="contact-item">
+          📧 Correo:
+          <a href="mailto:moysoportetec@gmail.com">
+            moysoportetec@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-buttons">
+
+          <a
+            class="btn btn-whatsapp"
+            href="https://wa.me/525520692796?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20MoySoporteTec."
+            target="_blank">
+            💬 Contactar por WhatsApp
+          </a>
+
+          <a
+            class="btn btn-email"
+            href="mailto:moysoportetec@gmail.com">
+            📧 Enviar correo
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+
+    <p>
+      © 2026 <strong>MoySoporteTec</strong>.
+      Todos los derechos reservados.
+    </p>
+
+    <p>
+      Soporte Técnico y Soluciones de Tecnología.
+    </p>
+
+  </footer>
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/525520692796?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20MoySoporteTec."
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+    💬
+  </a>
+
 </body>
 </html>
+```
