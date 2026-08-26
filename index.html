@@ -1,4 +1,4 @@
-<!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -89,7 +89,7 @@ nav a:hover {
 .btn-wsp { background: #25D366; color: white; }
 .btn-mail { background: white; color: #0b1220; }
 
-/* SERVICIOS */
+/* SECCIONES */
 section {
   padding: 70px 20px;
 }
@@ -99,13 +99,13 @@ section {
   margin: auto;
 }
 
+/* SERVICIOS */
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-/* BOTONES SERVICIOS */
 .service-btn {
   background: linear-gradient(145deg, #141c33, #0d1426);
   border-radius: 16px;
@@ -120,6 +120,15 @@ section {
 
 .service-btn:hover {
   transform: translateY(-10px) scale(1.03);
+}
+
+/* QUIÉNES SOMOS */
+.about-box {
+  background: #111a2e;
+  padding: 30px;
+  border-radius: 16px;
+  line-height: 1.8;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* CONTACTO */
@@ -193,6 +202,7 @@ section {
     <nav>
       <a href="#inicio">Inicio</a>
       <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
       <a href="#contacto">Contacto</a>
     </nav>
 
@@ -210,7 +220,7 @@ section {
   </div>
 </section>
 
-<!-- SERVICIOS CON WHATSAPP -->
+<!-- SERVICIOS -->
 <section id="servicios">
   <div class="container">
 
@@ -220,29 +230,34 @@ section {
 
     <div class="services">
 
-      <div class="service-btn" onclick="cotizar('Soporte Técnico PC y Laptop')">
-        💻 Soporte Técnico PC y Laptop
-      </div>
+      <div class="service-btn" onclick="cotizar('Soporte Técnico PC y Laptop')">💻 Soporte Técnico</div>
+      <div class="service-btn" onclick="cotizar('Redes Empresariales')">🖧 Redes</div>
+      <div class="service-btn" onclick="cotizar('Ciberseguridad')">🔐 Seguridad</div>
 
-      <div class="service-btn" onclick="cotizar('Mantenimiento Preventivo y Correctivo')">
-        🛠️ Mantenimiento Preventivo y Correctivo
-      </div>
+    </div>
 
-      <div class="service-btn" onclick="cotizar('Redes Empresariales e Internet')">
-        🖧 Redes Empresariales e Internet
-      </div>
+  </div>
+</section>
 
-      <div class="service-btn" onclick="cotizar('Ciberseguridad y Protección de Datos')">
-        🔐 Ciberseguridad y Protección de Datos
-      </div>
+<!-- QUIÉNES SOMOS -->
+<section id="nosotros">
+  <div class="container">
 
-      <div class="service-btn" onclick="cotizar('Instalación de Software y Sistemas')">
-        🖥️ Instalación de Software y Sistemas
-      </div>
+    <h2 style="text-align:center; margin-bottom:25px;">Quiénes Somos</h2>
 
-      <div class="service-btn" onclick="cotizar('Configuración de Servidores')">
-        📡 Configuración de Servidores
-      </div>
+    <div class="about-box">
+
+      <p><b>MOYSOPORTETEC</b> es una empresa especializada en ingeniería en soporte técnico y soluciones tecnológicas.</p>
+
+      <p>Brindamos servicios profesionales en mantenimiento, redes, servidores, ciberseguridad e infraestructura TI.</p>
+
+      <p>Nuestro objetivo es optimizar el rendimiento de tus sistemas con soluciones rápidas, eficientes y confiables.</p>
+
+      <p>Atendemos hogares, negocios y empresas con soporte técnico especializado.</p>
+
+      <p style="color:#00bfff; font-weight:bold;">
+        🚀 Tecnología • Soporte • Soluciones Profesionales
+      </p>
 
     </div>
 
@@ -253,11 +268,9 @@ section {
 <section id="contacto">
   <div class="container contact-box">
 
-    <h2>Contacto Empresarial</h2>
+    <h2>Contacto</h2>
 
-    <button class="btn btn-wsp" onclick="toggleContact()" style="margin-top:20px;">
-      Ver contacto
-    </button>
+    <button class="btn btn-wsp" onclick="toggleContact()">Ver contacto</button>
 
     <div id="contactPanel">
 
@@ -267,7 +280,7 @@ section {
       <div class="social-buttons">
 
         <a class="social whatsapp" href="https://wa.me/525520692796" target="_blank">WhatsApp</a>
-        <a class="social email" href="mailto:moysoportetec@gmail.com" target="_blank">Correo</a>
+        <a class="social email" href="mailto:moysoportetec@gmail.com">Correo</a>
         <a class="social youtube" href="https://www.youtube.com/@moysoportetec" target="_blank">YouTube</a>
         <a class="social facebook" href="https://www.facebook.com/moises.soportec" target="_blank">Facebook</a>
         <a class="social instagram" href="https://www.instagram.com/moysoportetec/" target="_blank">Instagram</a>
@@ -278,10 +291,6 @@ section {
 
   </div>
 </section>
-
-<footer>
-  <p>© 2026 MOYSOPORTETEC</p>
-</footer>
 
 <script>
 function toggleContact(){
