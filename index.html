@@ -91,7 +91,6 @@
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
-      display: inline-block;
     }
 
     .btn:hover {
@@ -101,6 +100,7 @@
     .whatsapp { background: #25D366; color: white; }
     .youtube { background: #FF0000; color: white; }
     .facebook { background: #1877F2; color: white; }
+    .instagram { background: #E1306C; color: white; }
     .email { background: white; color: #0066aa; }
 
     section {
@@ -160,25 +160,6 @@
       .services { grid-template-columns: 1fr; }
       .hero h1 { font-size: 38px; }
     }
-
-    /* WhatsApp flotante */
-    .float-whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      width: 60px;
-      height: 60px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      text-decoration: none;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      z-index: 9999;
-    }
   </style>
 </head>
 
@@ -189,7 +170,7 @@
     <div class="navbar">
 
       <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="logo.png" alt="Logo MoySoporteTec">
       </div>
 
       <nav>
@@ -209,7 +190,10 @@
       <p>Soporte técnico y soluciones tecnológicas</p>
 
       <div class="buttons">
-        <a class="btn whatsapp" href="https://wa.me/525520692796" target="_blank">WhatsApp</a>
+
+        <a class="btn whatsapp" href="https://wa.me/525520692796" target="_blank">
+          WhatsApp
+        </a>
 
         <a class="btn youtube" href="https://www.youtube.com/@moysoportetec" target="_blank">
           YouTube
@@ -219,9 +203,14 @@
           Facebook
         </a>
 
+        <a class="btn instagram" href="https://www.instagram.com/moysoportetec/" target="_blank">
+          Instagram
+        </a>
+
         <a class="btn email" href="mailto:moysoportetec@gmail.com">
           Correo
         </a>
+
       </div>
     </div>
 
@@ -257,28 +246,10 @@
     </div>
   </section>
 
-  <!-- CONTACTO -->
-  <section id="contacto">
-    <div class="container" style="text-align:center;">
-
-      <h2>Contacto</h2>
-      <p>WhatsApp: 55 2069 2796</p>
-      <p>Email: moysoportetec@gmail.com</p>
-
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 MoySoporteTec</p>
+    <p>© 2026 MoySoporteTec - Todos los derechos reservados</p>
   </footer>
-
-  <!-- WHATSAPP FLOTANTE -->
-  <a class="float-whatsapp"
-     href="https://wa.me/525520692796"
-     target="_blank">
-    💬
-  </a>
 
 </body>
 </html>
