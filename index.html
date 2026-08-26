@@ -21,7 +21,6 @@
 body {
   background: #0b1220;
   color: white;
-  overflow-x: hidden;
 }
 
 /* HEADER */
@@ -110,7 +109,7 @@ nav a:hover {
   color: #0b1220;
 }
 
-/* SECTIONS */
+/* SECCIÓN SERVICIOS */
 section {
   padding: 70px 20px;
 }
@@ -120,49 +119,39 @@ section {
   margin: auto;
 }
 
-/* SERVICES */
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
-.card {
-  background: #111a2e;
+/* 🔥 BOTONES 3D PROFESIONALES */
+.service-btn {
+  background: linear-gradient(145deg, #141c33, #0d1426);
+  border-radius: 16px;
   padding: 30px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: .4s;
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card:hover {
-  transform: translateY(-8px);
-  border-color: #00bfff;
-}
-
-.icon {
-  font-size: 35px;
-}
-
-/* CONTACTO */
-.contact-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.contact-buttons a {
-  width: 260px;
   text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 15px #050913,
+              -6px -6px 15px #1a2747;
+}
+
+.service-btn span {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.service-btn h3 {
+  font-size: 16px;
+}
+
+.service-btn:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 10px 10px 25px #050913,
+              -10px -10px 25px #1a2747;
+  background: linear-gradient(145deg, #182447, #0c1326);
 }
 
 /* FOOTER */
@@ -217,18 +206,41 @@ footer {
   </div>
 </section>
 
-<!-- SERVICIOS -->
+<!-- SERVICIOS 3D -->
 <section id="servicios">
   <div class="container">
 
     <div class="services">
 
-      <div class="card"><div class="icon">🖧</div><h3>Redes Empresariales</h3></div>
-      <div class="card"><div class="icon">🖥️</div><h3>Servidores</h3></div>
-      <div class="card"><div class="icon">🔐</div><h3>Ciberseguridad</h3></div>
-      <div class="card"><div class="icon">💻</div><h3>Soporte Técnico</h3></div>
-      <div class="card"><div class="icon">☁️</div><h3>Cloud</h3></div>
-      <div class="card"><div class="icon">📡</div><h3>Infraestructura TI</h3></div>
+      <div class="service-btn">
+        <span>🖧</span>
+        <h3>Redes Empresariales</h3>
+      </div>
+
+      <div class="service-btn">
+        <span>🖥️</span>
+        <h3>Servidores & Virtualización</h3>
+      </div>
+
+      <div class="service-btn">
+        <span>🔐</span>
+        <h3>Ciberseguridad Avanzada</h3>
+      </div>
+
+      <div class="service-btn">
+        <span>💻</span>
+        <h3>Soporte Técnico Empresarial</h3>
+      </div>
+
+      <div class="service-btn">
+        <span>☁️</span>
+        <h3>Cloud & Backup</h3>
+      </div>
+
+      <div class="service-btn">
+        <span>📡</span>
+        <h3>Infraestructura TI</h3>
+      </div>
 
     </div>
 
@@ -237,15 +249,21 @@ footer {
 
 <!-- CONTACTO -->
 <section id="contacto">
-  <div class="container">
+  <div class="container" style="text-align:center;">
 
-    <div class="contact-buttons">
+    <h2>Contacto</h2>
 
-      <a class="btn btn-wsp" href="https://wa.me/525520692796" target="_blank">💬 WhatsApp</a>
-      <a class="btn btn-mail" href="mailto:moysoportetec@gmail.com">📧 Correo</a>
-      <a class="btn btn-wsp" style="background:#ff0000;" href="https://www.youtube.com/@moysoportetec" target="_blank">▶ YouTube</a>
-      <a class="btn btn-wsp" style="background:#1877F2;" href="https://www.facebook.com/moises.soportec" target="_blank">👍 Facebook</a>
-      <a class="btn btn-wsp" style="background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);" href="https://www.instagram.com/moysoportetec/" target="_blank">📸 Instagram</a>
+    <div class="buttons" style="margin-top:20px;">
+
+      <a class="btn btn-wsp" href="https://wa.me/525520692796" target="_blank">WhatsApp</a>
+
+      <a class="btn btn-mail" href="mailto:moysoportetec@gmail.com">Correo</a>
+
+      <a class="btn btn-wsp" style="background:#ff0000;" href="https://www.youtube.com/@moysoportetec" target="_blank">YouTube</a>
+
+      <a class="btn btn-wsp" style="background:#1877F2;" href="https://www.facebook.com/moises.soportec" target="_blank">Facebook</a>
+
+      <a class="btn btn-wsp" style="background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);" href="https://www.instagram.com/moysoportetec/" target="_blank">Instagram</a>
 
     </div>
 
