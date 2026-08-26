@@ -220,7 +220,7 @@ section {
   </div>
 </section>
 
-<!-- SERVICIOS COMPLETOS -->
+<!-- SERVICIOS -->
 <section id="servicios">
   <div class="container">
 
@@ -230,25 +230,107 @@ section {
 
     <div class="services">
 
-      <div class="service-btn" onclick="cotizar('Soporte Técnico PC y Laptop')">💻 Soporte Técnico PC y Laptop</div>
+      <div class="service-btn" onclick="cotizar('Soporte Técnico PC y Laptop')">💻 Soporte Técnico</div>
       <div class="service-btn" onclick="cotizar('Mantenimiento Preventivo y Correctivo')">🛠️ Mantenimiento</div>
-      <div class="service-btn" onclick="cotizar('Reparación de Equipos de Cómputo')">🔧 Reparación</div>
-      <div class="service-btn" onclick="cotizar('Redes Empresariales e Internet')">🖧 Redes</div>
-      <div class="service-btn" onclick="cotizar('Configuración de Wi-Fi y Routers')">📶 Wi-Fi</div>
-      <div class="service-btn" onclick="cotizar('Instalación de Software y Sistemas')">🖥️ Software</div>
-      <div class="service-btn" onclick="cotizar('Ciberseguridad y Protección de Datos')">🔐 Seguridad</div>
-      <div class="service-btn" onclick="cotizar('Respaldos y Recuperación de Información')">☁️ Respaldos</div>
-      <div class="service-btn" onclick="cotizar('Configuración de Servidores')">📡 Servidores</div>
-      <div class="service-btn" onclick="cotizar('Soporte a Impresoras y Periféricos')">🖨️ Impresoras</div>
-      <div class="service-btn" onclick="cotizar('Infraestructura Tecnológica Empresarial')">🏢 Infraestructura</div>
-      <div class="service-btn" onclick="cotizar('Soporte Técnico Remoto y en Sitio')">🌐 Soporte Remoto</div>
+      <div class="service-btn" onclick="cotizar('Redes Empresariales')">🖧 Redes</div>
+      <div class="service-btn" onclick="cotizar('Ciberseguridad')">🔐 Seguridad</div>
+      <div class="service-btn" onclick="cotizar('Servidores')">📡 Servidores</div>
+      <div class="service-btn" onclick="cotizar('Soporte Remoto')">🌐 Soporte Remoto</div>
 
     </div>
 
   </div>
 </section>
 
+<!-- QUIÉNES SOMOS -->
+<section id="nosotros">
+  <div class="container">
+
+    <h2 style="text-align:center; margin-bottom:25px;">Quiénes Somos</h2>
+
+    <div class="about-box">
+
+      <p>
+        <strong>MOYSOPORTETEC</strong> es una empresa especializada en 
+        ingeniería en soporte técnico y soluciones tecnológicas para hogares, negocios y empresas.
+      </p>
+
+      <br>
+
+      <p>
+        Nos dedicamos a ofrecer servicios profesionales en mantenimiento de equipos de cómputo,
+        redes empresariales, servidores, ciberseguridad e infraestructura TI.
+      </p>
+
+      <br>
+
+      <p>
+        Nuestro objetivo es garantizar el correcto funcionamiento de la tecnología,
+        optimizando el rendimiento de los sistemas y brindando soluciones rápidas, eficientes y confiables.
+      </p>
+
+      <br>
+
+      <p>
+        Contamos con experiencia en soporte técnico preventivo y correctivo,
+        instalación de software, configuración de redes y atención personalizada.
+      </p>
+
+      <br>
+
+      <p>
+        🚀 <strong>Comprometidos con la innovación, la calidad y el servicio profesional.</strong>
+      </p>
+
+      <br>
+
+      <p style="color:#00bfff; font-weight:bold; text-align:center;">
+        Tecnología • Soporte • Soluciones Profesionales
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="container contact-box">
+
+    <h2>Contacto y Redes Sociales</h2>
+
+    <button class="btn btn-wsp" onclick="toggleContact()">Ver contacto</button>
+
+    <div id="contactPanel">
+
+      <p>📞 5520632796</p>
+      <p>📧 moysoportetec@gmail.com</p>
+
+      <div class="social-buttons">
+
+        <a class="social whatsapp" href="https://wa.me/525520692796" target="_blank">WhatsApp</a>
+        <a class="social email" href="mailto:moysoportetec@gmail.com">Correo</a>
+        <a class="social youtube" href="https://www.youtube.com/@moysoportetec" target="_blank">YouTube</a>
+        <a class="social facebook" href="https://www.facebook.com/moises.soportec" target="_blank">Facebook</a>
+        <a class="social instagram" href="https://www.instagram.com/moysoportetec/" target="_blank">Instagram</a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 MOYSOPORTETEC</p>
+</footer>
+
 <script>
+function toggleContact(){
+  const panel = document.getElementById("contactPanel");
+  panel.style.display = (panel.style.display === "block") ? "none" : "block";
+}
+
 function cotizar(servicio){
   const telefono = "525520692796";
   const mensaje = "Hola, quiero cotizar el servicio de: " + servicio;
