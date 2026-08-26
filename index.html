@@ -105,13 +105,11 @@ section {
   gap: 20px;
 }
 
-/* BOTONES 3D SERVICIOS */
 .service-btn {
   background: linear-gradient(145deg, #141c33, #0d1426);
   border-radius: 16px;
   padding: 30px;
   text-align: center;
-  cursor: pointer;
   transition: 0.3s;
   box-shadow: 6px 6px 15px #050913,
               -6px -6px 15px #1a2747;
@@ -119,7 +117,53 @@ section {
 }
 
 .service-btn:hover {
-  transform: translateY(-10px) scale(1.03);
+  transform: translateY(-10px);
+}
+
+/* CONTACTO */
+.contact-box {
+  text-align: center;
+}
+
+#contactPanel {
+  display: none;
+  margin-top: 20px;
+  background: #111a2e;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* REDES */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.social {
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.social:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp { background: #25D366; }
+.email { background: #555; }
+.youtube { background: #ff0000; }
+.facebook { background: #1877F2; }
+.instagram {
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
 }
 
 /* RESPONSIVE */
@@ -164,38 +208,60 @@ section {
   </div>
 </section>
 
-<!-- SERVICIOS ACTUALIZADOS -->
+<!-- SERVICIOS -->
 <section id="servicios">
   <div class="container">
 
-    <h2 style="text-align:center; margin-bottom:25px;">
-      Servicios de Ingeniería en Soporte Técnico
-    </h2>
-
     <div class="services">
 
-      <div class="service-btn">💻 Soporte Técnico PC y Laptop</div>
-
-      <div class="service-btn">🛠️ Mantenimiento Preventivo y Correctivo</div>
-
-      <div class="service-btn">🖧 Redes Empresariales e Internet</div>
-
-      <div class="service-btn">🔐 Ciberseguridad y Protección de Datos</div>
-
-      <div class="service-btn">🖥️ Instalación de Software y Sistemas</div>
-
-      <div class="service-btn">☁️ Respaldos en la Nube</div>
-
-      <div class="service-btn">📡 Configuración de Servidores</div>
-
-      <div class="service-btn">📶 Optimización de Redes Wi-Fi</div>
-
-      <div class="service-btn">🖨️ Soporte a Impresoras y Periféricos</div>
+      <div class="service-btn">💻 Soporte Técnico</div>
+      <div class="service-btn">🖧 Redes Empresariales</div>
+      <div class="service-btn">🔐 Ciberseguridad</div>
+      <div class="service-btn">☁️ Cloud TI</div>
+      <div class="service-btn">🖥️ Servidores</div>
+      <div class="service-btn">📡 Infraestructura</div>
 
     </div>
 
   </div>
 </section>
+
+<!-- CONTACTO + REDES -->
+<section id="contacto">
+  <div class="container contact-box">
+
+    <h2>Contacto y Redes Sociales</h2>
+
+    <button class="btn btn-wsp" onclick="toggleContact()" style="margin-top:20px;">
+      Ver contacto
+    </button>
+
+    <div id="contactPanel">
+
+      <p>📞 <b>Teléfono:</b> 5520632796</p>
+      <p>📧 <b>Correo:</b> moysoportetec@gmail.com</p>
+
+      <div class="social-buttons">
+
+        <a class="social whatsapp" href="https://wa.me/525520692796" target="_blank">WhatsApp</a>
+        <a class="social email" href="mailto:moysoportetec@gmail.com">Correo</a>
+        <a class="social youtube" href="https://www.youtube.com/@moysoportetec" target="_blank">YouTube</a>
+        <a class="social facebook" href="https://www.facebook.com/moises.soportec" target="_blank">Facebook</a>
+        <a class="social instagram" href="https://www.instagram.com/moysoportetec/" target="_blank">Instagram</a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<script>
+function toggleContact(){
+  const panel = document.getElementById("contactPanel");
+  panel.style.display = (panel.style.display === "block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
