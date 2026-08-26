@@ -9,7 +9,33 @@
 
   <meta name="description" content="MoySoporteTec ofrece soporte técnico, reparación de computadoras, redes Wi-Fi, cámaras de seguridad y venta de tecnología.">
 
-  <style>
+  <style>.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4) contrast(1.2);
+}
+
+/* HERO encima del video */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 1;
+}
     * {
       margin: 0;
       padding: 0;
