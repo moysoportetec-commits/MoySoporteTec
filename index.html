@@ -106,7 +106,7 @@
       color: #0066aa;
     }
 
-    /* YOUTUBE BUTTON */
+    /* 🔴 YOUTUBE BUTTON */
     .btn-youtube {
       background: #ff0000;
       color: white;
@@ -167,38 +167,6 @@
       padding: 25px;
     }
 
-    /* WHATSAPP FLOTANTE */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      background: #25D366;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      text-decoration: none;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      z-index: 9999;
-      transition: .3s;
-      animation: pulse 2s infinite;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-      background: #1ebe5d;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
-      70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-    }
-
     @media (max-width: 900px) {
       .services {
         grid-template-columns: repeat(2, 1fr);
@@ -218,7 +186,6 @@
         font-size: 35px;
       }
     }
-
   </style>
 </head>
 
@@ -251,15 +218,25 @@
       <p>Soporte técnico y soluciones tecnológicas para hogares y negocios</p>
 
       <div class="buttons">
-        <a class="btn btn-whatsapp" href="https://wa.me/525520692796" target="_blank">WhatsApp</a>
 
-        <a class="btn btn-email" href="mailto:moysoportetec@gmail.com">Correo</a>
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/525520692796"
+           target="_blank">
+          WhatsApp
+        </a>
 
+        <a class="btn btn-email"
+           href="mailto:moysoportetec@gmail.com">
+          Correo
+        </a>
+
+        <!-- 🔴 YOUTUBE BOTÓN AGREGADO -->
         <a class="btn btn-youtube"
            href="https://www.youtube.com/@moysoportetec"
            target="_blank">
           ▶ YouTube
         </a>
+
       </div>
     </div>
   </section>
@@ -298,13 +275,6 @@
   <footer>
     <p>© 2026 MoySoporteTec - Todos los derechos reservados</p>
   </footer>
-
-  <!-- WHATSAPP FLOTANTE -->
-  <a class="whatsapp-float"
-     href="https://wa.me/525520692796?text=Hola%20quiero%20información%20de%20MoySoporteTec"
-     target="_blank">
-    💬
-  </a>
 
 </body>
 </html>
