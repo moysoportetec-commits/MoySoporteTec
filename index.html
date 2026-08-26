@@ -1,251 +1,48 @@
-<!DOCTYPE html>
-<html lang="es">
+<!-- CONTACTO Y REDES -->
+<section id="contacto">
+  <div class="container">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="section-title">
+      <h2>Contacto</h2>
+    </div>
 
-  <title>MoySoporteTec | Empresa TI Profesional</title>
+    <div style="text-align:center; margin-bottom:30px;">
+      
+      <p>📱 WhatsApp: <strong>55 2069 2796</strong></p>
+      <p>📧 Correo: <strong>moysoportetec@gmail.com</strong></p>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+      <div class="buttons" style="margin-top:20px;">
 
-    body {
-      background: #0b1220;
-      color: white;
-    }
+        <a class="btn btn-whatsapp" href="https://wa.me/525520692796" target="_blank">
+          WhatsApp
+        </a>
 
-    header {
-      position: sticky;
-      top: 0;
-      background: rgba(0,0,0,0.7);
-      padding: 10px 0;
-      z-index: 1000;
-      backdrop-filter: blur(10px);
-    }
+        <a class="btn btn-email" href="mailto:moysoportetec@gmail.com">
+          Correo
+        </a>
 
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-    }
-
-    .logo img {
-      height: 50px;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #00d4ff;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 120px 20px;
-    }
-
-    .hero h1 {
-      font-size: 55px;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      opacity: 0.8;
-    }
-
-    /* BOTONES */
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-      color: white;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
-    .whatsapp { background: #25D366; }
-    .correo { background: #0078ff; }
-    .youtube { background: red; }
-    .facebook { background: #1877f2; }
-    .instagram { background: #e1306c; }
-
-    /* SERVICIOS */
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-
-    /* 🔥 CARD 3D PROFESIONAL */
-    .card {
-      background: linear-gradient(145deg, #16233d, #0f1a2e);
-      padding: 25px;
-      border-radius: 14px;
-      text-align: center;
-
-      position: relative;
-      overflow: hidden;
-
-      opacity: 0;
-      transform: translateY(60px);
-      transition: all 0.3s ease;
-    }
-
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* 3D HOVER */
-    .card:hover {
-      transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1.05);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
-    }
-
-    /* LUZ PREMIUM */
-    .card::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
-      transform: rotate(25deg);
-      opacity: 0;
-      transition: 0.4s;
-    }
-
-    .card:hover::before {
-      opacity: 1;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a0f1c;
-      color: #aaa;
-    }
-
-    /* WHATSAPP FLOTANTE */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      text-decoration: none;
-      color: white;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="navbar">
-      <div class="logo">
-        <img src="logo.png" alt="logo">
       </div>
-
-      <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
-      </nav>
     </div>
-  </header>
 
-  <!-- HERO -->
-  <section class="hero" id="inicio">
+    <div class="section-title">
+      <h2>Redes Sociales</h2>
+    </div>
 
-    <h1>MoySoporteTec</h1>
-    <p>Empresa profesional de soporte TI</p>
+    <div class="buttons">
 
-    <a class="btn whatsapp" href="https://wa.me/525520692796">WhatsApp</a>
-    <a class="btn correo" href="mailto:moysoportetec@gmail.com">Correo</a>
-    <a class="btn youtube" href="https://www.youtube.com/@moysoportetec">YouTube</a>
+      <a class="btn youtube" href="https://www.youtube.com/@moysoportetec" target="_blank">
+        YouTube
+      </a>
 
-  </section>
+      <a class="btn facebook" href="https://www.facebook.com/moises.soportec" target="_blank">
+        Facebook
+      </a>
 
-  <!-- SERVICIOS -->
-  <section id="servicios">
-
-    <div class="services">
-
-      <div class="card">💻 Soporte Técnico</div>
-      <div class="card">🔧 Mantenimiento TI</div>
-      <div class="card">📡 Redes y Servidores</div>
-      <div class="card">🛡️ Ciberseguridad</div>
-      <div class="card">☁️ Cloud & Infraestructura</div>
-      <div class="card">⚙️ Automatización</div>
+      <a class="btn instagram" href="https://www.instagram.com/moysoportetec/" target="_blank">
+        Instagram
+      </a>
 
     </div>
 
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2026 MoySoporteTec
-  </footer>
-
-  <!-- WHATSAPP FLOTANTE -->
-  <a class="whatsapp-float" href="https://wa.me/525520692796">💬</a>
-
-  <!-- SCROLL ANIMATION -->
-  <script>
-    const cards = document.querySelectorAll('.card');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('show');
-        }
-      });
-    }, { threshold: 0.2 });
-
-    cards.forEach(card => observer.observe(card));
-  </script>
-
-</body>
-</html>
+  </div>
+</section>
