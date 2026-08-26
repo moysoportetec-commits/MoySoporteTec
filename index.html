@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>MoySoporteTec | Ingeniería en Soporte TI</title>
 
-  <meta name="description" content="Empresa de soporte técnico, redes, seguridad informática y soluciones tecnológicas profesionales.">
+  <meta name="description" content="Empresa de soporte técnico, redes, ciberseguridad y soluciones tecnológicas profesionales.">
 
   <style>
     * {
@@ -20,18 +21,6 @@
     body {
       background: #0b1220;
       color: white;
-    }
-
-    /* ANIMACIÓN DE ENTRADA */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     header {
@@ -67,7 +56,7 @@
       color: #00c8ff;
     }
 
-    /* VIDEO BACKGROUND */
+    /* HERO */
     .hero {
       position: relative;
       height: 100vh;
@@ -89,7 +78,6 @@
     .hero-content {
       position: relative;
       z-index: 2;
-      animation: fadeUp 1s ease;
     }
 
     .hero h1 {
@@ -118,10 +106,6 @@
     .fb { background: #1877f2; color: white; }
     .ig { background: #e1306c; color: white; }
 
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
     section {
       padding: 80px 20px;
       text-align: center;
@@ -129,9 +113,9 @@
 
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 20px;
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
     }
 
@@ -141,30 +125,17 @@
       border-radius: 12px;
       backdrop-filter: blur(10px);
       transition: .3s;
-      animation: fadeUp 1s ease;
     }
 
     .card:hover {
       transform: translateY(-8px);
     }
 
-    /* WHATSAPP FLOTANTE */
-    .float-wsp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: white;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      text-decoration: none;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-      z-index: 9999;
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      color: #aaa;
     }
   </style>
 </head>
@@ -198,7 +169,6 @@
 
     <a class="btn whatsapp" href="https://wa.me/525520692796">WhatsApp</a>
     <a class="btn email" href="mailto:moysoportetec@gmail.com">Correo</a>
-
     <br><br>
 
     <a class="btn yt" href="https://www.youtube.com/@moysoportetec" target="_blank">YouTube</a>
@@ -207,18 +177,26 @@
   </div>
 </section>
 
-<!-- SERVICIOS -->
+<!-- SERVICIOS PROFESIONALES -->
 <section id="servicios">
-  <h2>Servicios Profesionales TI</h2>
+
+  <h2>Servicios de Ingeniería en TI</h2>
+  <p>Soluciones tecnológicas avanzadas para empresas y negocios</p>
 
   <div class="services">
 
-    <div class="card">Soporte técnico empresarial</div>
-    <div class="card">Redes y servidores</div>
-    <div class="card">Ciberseguridad</div>
-    <div class="card">CCTV y videovigilancia</div>
-    <div class="card">Mantenimiento de equipos</div>
-    <div class="card">Infraestructura TI</div>
+    <div class="card">🖥️ Soporte Técnico Empresarial</div>
+    <div class="card">🌐 Redes LAN / WAN / WiFi</div>
+    <div class="card">🛡️ Ciberseguridad</div>
+    <div class="card">☁️ Cloud & Microsoft 365</div>
+    <div class="card">📹 CCTV y Videovigilancia</div>
+    <div class="card">💾 Backup y recuperación</div>
+    <div class="card">⚙️ Mantenimiento de equipos</div>
+    <div class="card">🧠 Soporte remoto</div>
+    <div class="card">🏢 Infraestructura TI</div>
+    <div class="card">🖨️ Impresoras corporativas</div>
+    <div class="card">📡 Redes avanzadas VLAN</div>
+    <div class="card">🔐 Control de acceso</div>
 
   </div>
 </section>
@@ -230,12 +208,9 @@
   <p>Email: moysoportetec@gmail.com</p>
 </section>
 
-<!-- WHATSAPP FLOTANTE -->
-<a class="float-wsp"
-   href="https://wa.me/525520692796?text=Hola%20quiero%20información"
-   target="_blank">
-  💬
-</a>
+<footer>
+  © 2026 MoySoporteTec - Ingeniería en TI
+</footer>
 
 </body>
 </html>
