@@ -147,12 +147,22 @@ section {
   border-color: #00bfff;
 }
 
-.card h3 {
-  margin-top: 10px;
-}
-
 .icon {
   font-size: 35px;
+}
+
+/* CONTACTO BOTONES */
+.contact-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-buttons a {
+  width: 260px;
+  text-align: center;
 }
 
 /* FOOTER */
@@ -180,6 +190,7 @@ footer {
 
 <header>
   <div class="navbar">
+
     <div class="logo">
       <img src="logo.png" alt="Logo">
     </div>
@@ -189,6 +200,7 @@ footer {
       <a href="#servicios">Servicios</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
   </div>
 </header>
 
@@ -196,7 +208,7 @@ footer {
 <section class="hero" id="inicio">
   <div>
     <h1>Ingeniería en Soporte TI</h1>
-    <p>Soluciones profesionales en redes, servidores, seguridad informática y mantenimiento empresarial</p>
+    <p>Soluciones profesionales en redes, servidores, ciberseguridad y soporte empresarial</p>
 
     <div class="buttons">
       <a class="btn btn-wsp" href="https://wa.me/525520692796" target="_blank">WhatsApp</a>
@@ -211,41 +223,37 @@ footer {
 
     <div class="services">
 
-      <div class="card">
-        <div class="icon">🖧</div>
-        <h3>Redes Empresariales</h3>
-        <p>Diseño e instalación de redes seguras y escalables.</p>
-      </div>
+      <div class="card"><div class="icon">🖧</div><h3>Redes Empresariales</h3></div>
+      <div class="card"><div class="icon">🖥️</div><h3>Servidores</h3></div>
+      <div class="card"><div class="icon">🔐</div><h3>Ciberseguridad</h3></div>
+      <div class="card"><div class="icon">💻</div><h3>Soporte Técnico</h3></div>
+      <div class="card"><div class="icon">☁️</div><h3>Cloud</h3></div>
+      <div class="card"><div class="icon">📡</div><h3>Infraestructura TI</h3></div>
 
-      <div class="card">
-        <div class="icon">🖥️</div>
-        <h3>Servidores</h3>
-        <p>Configuración, mantenimiento y virtualización de servidores.</p>
-      </div>
+    </div>
 
-      <div class="card">
-        <div class="icon">🔐</div>
-        <h3>Ciberseguridad</h3>
-        <p>Protección de datos, firewalls y monitoreo avanzado.</p>
-      </div>
+  </div>
+</section>
 
-      <div class="card">
-        <div class="icon">💻</div>
-        <h3>Soporte Técnico</h3>
-        <p>Mantenimiento preventivo y correctivo de equipos.</p>
-      </div>
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="container">
 
-      <div class="card">
-        <div class="icon">📡</div>
-        <h3>Infraestructura TI</h3>
-        <p>Instalación de equipos, cableado y centros de datos.</p>
-      </div>
+    <div class="section-title" style="text-align:center;">
+      <h2>Contacto y Redes</h2>
+    </div>
 
-      <div class="card">
-        <div class="icon">☁️</div>
-        <h3>Cloud / Nube</h3>
-        <p>Servicios en la nube, backups y migración de sistemas.</p>
-      </div>
+    <div class="contact-buttons">
+
+      <a class="btn btn-wsp" href="https://wa.me/525520692796" target="_blank">💬 WhatsApp</a>
+
+      <a class="btn btn-mail" href="mailto:moysoportetec@gmail.com">📧 Correo</a>
+
+      <a class="btn btn-wsp" style="background:#ff0000;" href="https://www.youtube.com/@moysoportetec" target="_blank">▶ YouTube</a>
+
+      <a class="btn btn-wsp" style="background:#1877F2;" href="https://www.facebook.com/moises.soportec" target="_blank">👍 Facebook</a>
+
+      <a class="btn btn-wsp" style="background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);" href="https://www.instagram.com/moysoportetec/" target="_blank">📸 Instagram</a>
 
     </div>
 
