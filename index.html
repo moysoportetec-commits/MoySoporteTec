@@ -7,7 +7,7 @@
 
 <title>MOYSOPORTETEC | Ingeniería en Soporte Técnico</title>
 
-<meta name="description" content="MOYSOPORTETEC es una empresa de ingeniería en soporte técnico, redes, servidores, ciberseguridad y soluciones TI profesionales.">
+<meta name="description" content="MOYSOPORTETEC empresa de ingeniería en soporte técnico, redes, servidores, ciberseguridad y soluciones TI profesionales.">
 
 <style>
 * {
@@ -148,27 +148,51 @@ section {
               -10px -10px 25px #1a2747;
 }
 
-/* CONTACTO PANEL */
+/* CONTACTO */
 .contact-box {
   text-align: center;
 }
 
 #contactPanel {
   display: none;
-  margin-top: 25px;
+  margin-top: 20px;
   background: #111a2e;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  max-width: 400px;
+  max-width: 450px;
   margin-left: auto;
   margin-right: auto;
-  animation: fadeIn .4s ease;
 }
 
-@keyframes fadeIn {
-  from {opacity:0; transform:translateY(20px);}
-  to {opacity:1; transform:translateY(0);}
+/* REDES */
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.social {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+  color: white;
+}
+
+.social:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp { background: #25D366; }
+.email { background: #555; }
+.youtube { background: #ff0000; }
+.facebook { background: #1877F2; }
+.instagram {
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
 }
 
 /* FOOTER */
@@ -241,7 +265,7 @@ footer {
   </div>
 </section>
 
-<!-- CONTACTO -->
+<!-- CONTACTO + REDES -->
 <section id="contacto">
   <div class="container contact-box">
 
@@ -252,8 +276,20 @@ footer {
     </button>
 
     <div id="contactPanel">
-      <p style="margin-bottom:10px;">📞 <b>Teléfono:</b> 5520632796</p>
+
+      <p>📞 <b>Teléfono:</b> 5520632796</p>
       <p>📧 <b>Correo:</b> moysoportetec@gmail.com</p>
+
+      <div class="social-buttons">
+
+        <a class="social whatsapp" href="https://wa.me/525520692796" target="_blank">💬 WhatsApp</a>
+        <a class="social email" href="mailto:moysoportetec@gmail.com">📧 Correo</a>
+        <a class="social youtube" href="https://www.youtube.com/@moysoportetec" target="_blank">▶ YouTube</a>
+        <a class="social facebook" href="https://www.facebook.com/moises.soportec" target="_blank">👍 Facebook</a>
+        <a class="social instagram" href="https://www.instagram.com/moysoportetec/" target="_blank">📸 Instagram</a>
+
+      </div>
+
     </div>
 
   </div>
