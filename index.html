@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MoySoporteTec | Empresa TI Profesional</title>
+  <title>MoySoporteTec | Soporte Técnico y Tecnología</title>
+
+  <meta name="description" content="MoySoporteTec ofrece soporte técnico, reparación de computadoras, redes Wi-Fi, cámaras de seguridad y venta de tecnología.">
 
   <style>
     * {
@@ -13,122 +15,164 @@
       padding: 0;
       box-sizing: border-box;
       scroll-behavior: smooth;
-      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-      background: #0b1220;
-      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #222;
+      line-height: 1.6;
     }
 
     header {
+      background: rgba(7, 26, 43, 0.95);
       position: sticky;
       top: 0;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(10px);
       z-index: 1000;
     }
 
     .navbar {
       max-width: 1200px;
       margin: auto;
+      padding: 15px 25px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      justify-content: space-between;
     }
 
     .logo img {
-      height: 50px;
+      height: 45px;
+      width: auto;
     }
 
     nav a {
       color: white;
-      margin-left: 15px;
       text-decoration: none;
-      font-weight: bold;
+      margin-left: 18px;
+      font-weight: 600;
+      transition: .3s;
     }
 
     nav a:hover {
-      color: #00d4ff;
+      color: #00aaff;
     }
 
-    /* HERO */
     .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 120px 20px;
-    }
-
-    .hero h1 {
-      font-size: 55px;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      opacity: 0.8;
-    }
-
-    /* BOTONES */
-    .btn {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #061522, #0a4b7a);
       color: white;
     }
 
-    .btn:hover {
-      transform: scale(1.05);
+    .hero h1 {
+      font-size: 60px;
+      font-weight: 800;
     }
 
-    .whatsapp { background: #25D366; }
-    .correo { background: #0078ff; }
-    .youtube { background: red; }
-    .facebook { background: #1877f2; }
-    .instagram { background: #e1306c; }
+    .hero p {
+      font-size: 20px;
+      opacity: 0.9;
+    }
 
-    /* SERVICIOS */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .btn {
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366, #1ebe5d);
+      color: white;
+    }
+
+    .btn-email {
+      background: white;
+      color: #0066aa;
+    }
+
+    section {
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #071a2b;
+    }
+
     .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1100px;
-      margin: auto;
-      padding: 50px 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
     .card {
-      background: linear-gradient(145deg, #16233d, #0f1a2e);
-      padding: 25px;
-      border-radius: 14px;
+      background: white;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.08);
+      transition: .3s;
       text-align: center;
-      transition: 0.3s;
     }
 
     .card:hover {
-      transform: scale(1.05) rotateX(5deg);
+      transform: translateY(-10px);
+    }
+
+    .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a0f1c;
+      background: #04101c;
       color: #aaa;
-    }
-
-    /* CONTACTO */
-    .contacto {
       text-align: center;
-      padding: 60px 20px;
+      padding: 25px;
     }
 
-    .contacto p {
-      margin: 8px 0;
+    @media (max-width: 900px) {
+      .services {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
+    @media (max-width: 650px) {
+      .navbar {
+        flex-direction: column;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+    }
   </style>
 </head>
 
@@ -137,72 +181,81 @@
   <!-- HEADER -->
   <header>
     <div class="navbar">
+
       <div class="logo">
-        <img src="logo.png" alt="logo">
+        <a href="#inicio">
+          <img src="logo.png" alt="Moy SoporteTec Logo">
+        </a>
       </div>
 
       <nav>
         <a href="#inicio">Inicio</a>
         <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
         <a href="#contacto">Contacto</a>
       </nav>
+
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
+    <div>
+      <h1>MoySoporteTec</h1>
+      <p>Soporte técnico y soluciones tecnológicas para hogares y negocios</p>
 
-    <h1>MoySoporteTec</h1>
-    <p>Empresa profesional de soporte TI</p>
+      <div class="buttons">
 
-    <a class="btn whatsapp" href="https://wa.me/525520692796">WhatsApp</a>
-    <a class="btn correo" href="mailto:moysoportetec@gmail.com">Correo</a>
-    <a class="btn youtube" href="https://www.youtube.com/@moysoportetec">YouTube</a>
+        <!-- WHATSAPP CORREGIDO -->
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/525520692796"
+           target="_blank"
+           rel="noopener noreferrer">
+          WhatsApp
+        </a>
 
+        <a class="btn btn-email"
+           href="mailto:moysoportetec@gmail.com">
+          Correo
+        </a>
+
+      </div>
+    </div>
   </section>
 
   <!-- SERVICIOS -->
   <section id="servicios">
+    <div class="container">
 
-    <div class="services">
+      <div class="section-title">
+        <h2>Servicios</h2>
+      </div>
 
-      <div class="card">💻 Soporte Técnico</div>
-      <div class="card">🔧 Mantenimiento TI</div>
-      <div class="card">📡 Redes y Servidores</div>
-      <div class="card">🛡️ Ciberseguridad</div>
-      <div class="card">☁️ Cloud & Infraestructura</div>
-      <div class="card">⚙️ Automatización</div>
+      <div class="services">
+
+        <div class="card">
+          <div class="icon">💻</div>
+          <h3>Soporte Técnico</h3>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔧</div>
+          <h3>Reparación</h3>
+        </div>
+
+        <div class="card">
+          <div class="icon">📡</div>
+          <h3>Redes Wi-Fi</h3>
+        </div>
+
+      </div>
 
     </div>
-
-  </section>
-
-  <!-- CONTACTO + REDES -->
-  <section id="contacto" class="contacto">
-
-    <h2>Contacto</h2>
-
-    <p>📱 WhatsApp: 55 2069 2796</p>
-    <p>📧 Correo: moysoportetec@gmail.com</p>
-
-    <div>
-      <a class="btn whatsapp" href="https://wa.me/525520692796">WhatsApp</a>
-      <a class="btn correo" href="mailto:moysoportetec@gmail.com">Correo</a>
-    </div>
-
-    <h2 style="margin-top:30px;">Redes Sociales</h2>
-
-    <div>
-      <a class="btn youtube" href="https://www.youtube.com/@moysoportetec">YouTube</a>
-      <a class="btn facebook" href="https://www.facebook.com/moises.soportec">Facebook</a>
-      <a class="btn instagram" href="https://www.instagram.com/moysoportetec/">Instagram</a>
-    </div>
-
   </section>
 
   <!-- FOOTER -->
   <footer>
-    © 2026 MoySoporteTec - Todos los derechos reservados
+    <p>© 2026 MoySoporteTec - Todos los derechos reservados</p>
   </footer>
 
 </body>
