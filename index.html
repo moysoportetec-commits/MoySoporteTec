@@ -7,7 +7,7 @@
 
   <title>MoySoporteTec | Empresa de Ingeniería TI</title>
 
-  <meta name="description" content="MoySoporteTec - Empresa de soporte técnico, redes, servidores y ciberseguridad.">
+  <meta name="description" content="MoySoporteTec - Soporte técnico, redes, servidores y ciberseguridad.">
 
   <style>
     * {
@@ -97,7 +97,6 @@
       opacity: 0.8;
     }
 
-    /* BOTONES */
     .btn {
       display: inline-block;
       margin-top: 20px;
@@ -106,6 +105,7 @@
       text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
+      margin-right: 10px;
     }
 
     .btn-wsp {
@@ -118,7 +118,11 @@
       color: white;
     }
 
-    /* SECCIONES */
+    .btn-gmail {
+      background: #db4437;
+      color: white;
+    }
+
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -150,7 +154,6 @@
       background: #162033;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px;
@@ -158,7 +161,6 @@
       color: gray;
     }
 
-    /* WHATSAPP FLOAT */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -176,7 +178,6 @@
       box-shadow: 0 10px 20px rgba(0,0,0,0.4);
       z-index: 9999;
     }
-
   </style>
 </head>
 
@@ -209,18 +210,26 @@
 
   <div class="hero-content">
     <h1>MoySoporteTec</h1>
-    <p>Empresa de Ingeniería TI - Redes, Servidores y Ciberseguridad</p>
+    <p>Empresa TI - Redes, Servidores y Ciberseguridad</p>
 
-    <!-- BOTONES FUNCIONALES -->
+    <!-- WHATSAPP -->
     <a class="btn btn-wsp"
-       href="https://wa.me/525520692796?text=Hola%20quiero%20información%20de%20MoySoporteTec"
+       href="https://wa.me/525520692796?text=Hola%20quiero%20información"
        target="_blank">
-       💬 WhatsApp
+      💬 WhatsApp
     </a>
 
+    <!-- CORREO (APP DEFAULT) -->
     <a class="btn btn-mail"
-       href="mailto:moysoportetec@gmail.com?subject=Solicitud%20de%20información&body=Hola,%20quiero%20información%20sobre%20sus%20servicios">
-       📧 Correo
+       href="mailto:moysoportetec@gmail.com?subject=Solicitud%20de%20información&body=Hola,%20quiero%20información">
+      📧 Correo
+    </a>
+
+    <!-- GMAIL WEB -->
+    <a class="btn btn-gmail"
+       href="https://mail.google.com/mail/?view=cm&fs=1&to=moysoportetec@gmail.com&su=Información%20MoySoporteTec&body=Hola,%20quiero%20información%20de%20sus%20servicios"
+       target="_blank">
+      🌐 Gmail
     </a>
 
   </div>
@@ -230,337 +239,26 @@
 <!-- SERVICIOS -->
 <section id="servicios">
 
-  <h2>Servicios Empresariales TI</h2>
+  <h2>Servicios TI</h2>
 
   <div class="grid">
 
-    <div class="card">💻 Soporte técnico empresarial</div>
-    <div class="card">🌐 Redes y WiFi corporativo</div>
-    <div class="card">🖥️ Servidores Linux / Windows</div>
-    <div class="card">🔐 Ciberseguridad avanzada</div>
-    <div class="card">☁️ Cloud y Microsoft 365</div>
-    <div class="card">📡 CCTV profesional</div>
-
-  </div>
-
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto">
-
-  <h2>Contacto</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      📱 WhatsApp:
-      <a href="https://wa.me/525520692796?text=Hola%20quiero%20información" target="_blank">
-        55 2069 2796
-      </a>
-    </div>
-
-    <div class="card">
-      📧 Email:
-      <a href="mailto:moysoportetec@gmail.com?subject=Contacto&body=Hola%20quiero%20información">
-        moysoportetec@gmail.com
-      </a>
-    </div>
+    <div class="card">💻 Soporte técnico</div>
+    <div class="card">🌐 Redes corporativas</div>
+    <div class="card">🖥️ Servidores</div>
+    <div class="card">🔐 Ciberseguridad</div>
 
   </div>
 
 </section>
 
 <footer>
-  © 2026 MoySoporteTec - Empresa TI Profesional
+  © 2026 MoySoporteTec
 </footer>
 
 <!-- WHATSAPP FLOTANTE -->
 <a class="whatsapp-float"
-   href="https://wa.me/525520692796?text=Hola%20quiero%20información"
-   target="_blank">
-  💬
-</a>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="es">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>MoySoporteTec | Empresa de Ingeniería TI</title>
-
-  <meta name="description" content="MoySoporteTec - Empresa de soporte técnico, redes, servidores y ciberseguridad.">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-      font-family: Arial, sans-serif;
-    }
-
-    body {
-      background: #0b0f17;
-      color: white;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(0,0,0,0.7);
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
-
-    .navbar {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 20px;
-    }
-
-    .logo img {
-      height: 45px;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    nav a:hover {
-      color: #00aaff;
-    }
-
-    /* HERO */
-    .hero {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .video-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .video-bg video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(0.4);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 900px;
-      padding: 20px;
-    }
-
-    .hero h1 {
-      font-size: 55px;
-    }
-
-    .hero p {
-      margin-top: 10px;
-      font-size: 18px;
-      opacity: 0.8;
-    }
-
-    /* BOTONES */
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn-wsp {
-      background: #25D366;
-      color: white;
-    }
-
-    .btn-mail {
-      background: #0077ff;
-      color: white;
-    }
-
-    /* SECCIONES */
-    section {
-      padding: 80px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 30px;
-      color: #00aaff;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #111827;
-      padding: 25px;
-      border-radius: 15px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      background: #162033;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 30px;
-      background: black;
-      color: gray;
-    }
-
-    /* WHATSAPP FLOAT */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 28px;
-      color: white;
-      text-decoration: none;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-      z-index: 9999;
-    }
-
-  </style>
-</head>
-
-<body>
-
-<header>
-  <div class="navbar">
-
-    <div class="logo">
-      <img src="logo.png" alt="logo">
-    </div>
-
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero" id="inicio">
-
-  <div class="video-bg">
-    <video autoplay muted loop playsinline>
-      <source src="tech.mp4" type="video/mp4">
-    </video>
-  </div>
-
-  <div class="hero-content">
-    <h1>MoySoporteTec</h1>
-    <p>Empresa de Ingeniería TI - Redes, Servidores y Ciberseguridad</p>
-
-    <!-- BOTONES FUNCIONALES -->
-    <a class="btn btn-wsp"
-       href="https://wa.me/525520692796?text=Hola%20quiero%20información%20de%20MoySoporteTec"
-       target="_blank">
-       💬 WhatsApp
-    </a>
-
-    <a class="btn btn-mail"
-       href="mailto:moysoportetec@gmail.com?subject=Solicitud%20de%20información&body=Hola,%20quiero%20información%20sobre%20sus%20servicios">
-       📧 Correo
-    </a>
-
-  </div>
-
-</section>
-
-<!-- SERVICIOS -->
-<section id="servicios">
-
-  <h2>Servicios Empresariales TI</h2>
-
-  <div class="grid">
-
-    <div class="card">💻 Soporte técnico empresarial</div>
-    <div class="card">🌐 Redes y WiFi corporativo</div>
-    <div class="card">🖥️ Servidores Linux / Windows</div>
-    <div class="card">🔐 Ciberseguridad avanzada</div>
-    <div class="card">☁️ Cloud y Microsoft 365</div>
-    <div class="card">📡 CCTV profesional</div>
-
-  </div>
-
-</section>
-
-<!-- CONTACTO -->
-<section id="contacto">
-
-  <h2>Contacto</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      📱 WhatsApp:
-      <a href="https://wa.me/525520692796?text=Hola%20quiero%20información" target="_blank">
-        55 2069 2796
-      </a>
-    </div>
-
-    <div class="card">
-      📧 Email:
-      <a href="mailto:moysoportetec@gmail.com?subject=Contacto&body=Hola%20quiero%20información">
-        moysoportetec@gmail.com
-      </a>
-    </div>
-
-  </div>
-
-</section>
-
-<footer>
-  © 2026 MoySoporteTec - Empresa TI Profesional
-</footer>
-
-<!-- WHATSAPP FLOTANTE -->
-<a class="whatsapp-float"
-   href="https://wa.me/525520692796?text=Hola%20quiero%20información"
+   href="https://wa.me/525520692796"
    target="_blank">
   💬
 </a>
