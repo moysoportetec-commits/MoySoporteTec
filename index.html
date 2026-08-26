@@ -7,9 +7,11 @@
 
   <title>MoySoporteTec | Empresa de Ingeniería TI</title>
 
-  <meta name="description" content="MoySoporteTec - Empresa de soporte técnico, redes, servidores, ciberseguridad y soluciones tecnológicas para empresas y hogares.">
+  <meta name="description" content="MoySoporteTec - Empresa de soporte técnico, redes, servidores, ciberseguridad y soluciones tecnológicas.">
 
   <style>
+
+    /* RESET */
     * {
       margin: 0;
       padding: 0;
@@ -21,8 +23,30 @@
     body {
       background: #0b0f17;
       color: white;
+      animation: fadeIn 0.8s ease-in;
     }
 
+    /* =========================
+       ANIMACIONES PRO
+    ========================== */
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* HEADER */
     header {
       position: fixed;
       top: 0;
@@ -50,6 +74,7 @@
       margin-left: 15px;
       text-decoration: none;
       font-weight: 600;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -69,8 +94,7 @@
 
     .video-bg {
       position: absolute;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       z-index: 0;
     }
 
@@ -86,12 +110,7 @@
       z-index: 1;
       max-width: 900px;
       padding: 20px;
-      animation: fadeIn 2s ease;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
+      animation: fadeUp 1.2s ease-out;
     }
 
     .hero h1 {
@@ -111,6 +130,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     .btn-wsp {
@@ -123,6 +143,7 @@
       color: white;
     }
 
+    /* SECCIONES */
     section {
       padding: 80px 20px;
       max-width: 1200px;
@@ -136,17 +157,22 @@
       color: #00aaff;
     }
 
+    /* GRID */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
       gap: 20px;
     }
 
+    /* CARDS CON ANIMACIÓN */
     .card {
       background: #111827;
       padding: 25px;
       border-radius: 15px;
       transition: 0.3s;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s ease forwards;
     }
 
     .card:hover {
@@ -154,6 +180,17 @@
       background: #162033;
     }
 
+    /* delay tipo empresa grande */
+    .card:nth-child(1) { animation-delay: 0.1s; }
+    .card:nth-child(2) { animation-delay: 0.2s; }
+    .card:nth-child(3) { animation-delay: 0.3s; }
+    .card:nth-child(4) { animation-delay: 0.4s; }
+    .card:nth-child(5) { animation-delay: 0.5s; }
+    .card:nth-child(6) { animation-delay: 0.6s; }
+    .card:nth-child(7) { animation-delay: 0.7s; }
+    .card:nth-child(8) { animation-delay: 0.8s; }
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px;
@@ -177,6 +214,8 @@
       color: white;
       text-decoration: none;
       box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+      z-index: 9999;
+      animation: fadeUp 1s ease;
     }
 
   </style>
@@ -207,16 +246,16 @@
 <section class="hero" id="inicio">
 
   <div class="video-bg">
-    <video autoplay muted loop>
+    <video autoplay muted loop playsinline>
       <source src="tech.mp4" type="video/mp4">
     </video>
   </div>
 
   <div class="hero-content">
     <h1>MoySoporteTec</h1>
-    <p>Empresa de Ingeniería en Soporte TI, Redes, Servidores y Ciberseguridad</p>
+    <p>Empresa de Ingeniería TI - Redes, Servidores, Ciberseguridad</p>
 
-    <a class="btn btn-wsp" href="https://wa.me/5255206927969" target="_blank">WhatsApp</a>
+    <a class="btn btn-wsp" href="https://wa.me/525520692796" target="_blank">WhatsApp</a>
     <a class="btn btn-mail" href="mailto:moysoportetec@gmail.com">Correo</a>
   </div>
 
@@ -229,14 +268,12 @@
 
   <div class="grid">
 
-    <div class="card">💻 Soporte técnico empresarial L1-L3</div>
-    <div class="card">🌐 Redes, switches y WiFi corporativo</div>
-    <div class="card">🖥️ Servidores Windows / Linux</div>
-    <div class="card">🔐 Ciberseguridad y firewall</div>
-    <div class="card">☁️ Cloud & Microsoft 365</div>
-    <div class="card">📡 CCTV y videovigilancia</div>
-    <div class="card">🛠️ Mantenimiento preventivo TI</div>
-    <div class="card">📊 Mesa de ayuda IT corporativa</div>
+    <div class="card">💻 Soporte técnico empresarial</div>
+    <div class="card">🌐 Redes y WiFi corporativo</div>
+    <div class="card">🖥️ Servidores Linux / Windows</div>
+    <div class="card">🔐 Ciberseguridad avanzada</div>
+    <div class="card">☁️ Cloud y Microsoft 365</div>
+    <div class="card">📡 CCTV profesional</div>
 
   </div>
 
@@ -249,20 +286,15 @@
 
   <div class="grid">
 
-    <div class="card">
-      📱 WhatsApp: 55 2069 2796
-    </div>
-
-    <div class="card">
-      📧 Email: moysoportetec@gmail.com
-    </div>
+    <div class="card">📱 WhatsApp: 55 2069 2796</div>
+    <div class="card">📧 Email: moysoportetec@gmail.com</div>
 
   </div>
 
 </section>
 
 <footer>
-  © 2026 MoySoporteTec - Empresa de Ingeniería TI
+  © 2026 MoySoporteTec - Empresa TI Profesional
 </footer>
 
 <!-- WHATSAPP FLOAT -->
