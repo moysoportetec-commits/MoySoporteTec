@@ -62,16 +62,11 @@
 
     .hero h1 {
       font-size: 55px;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1s forwards;
     }
 
     .hero p {
       margin-top: 10px;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeUp 1s 0.3s forwards;
+      opacity: 0.8;
     }
 
     /* BOTONES */
@@ -92,38 +87,62 @@
 
     .whatsapp { background: #25D366; }
     .correo { background: #0078ff; }
-    .youtube { background: #ff0000; }
+    .youtube { background: red; }
     .facebook { background: #1877f2; }
     .instagram { background: #e1306c; }
 
-    /* SECCIONES */
-    section {
-      padding: 70px 20px;
-      text-align: center;
-    }
-
+    /* SERVICIOS */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
       max-width: 1100px;
       margin: auto;
+      padding: 50px 20px;
     }
 
-    /* TARJETAS */
+    /* 🔥 CARD 3D PROFESIONAL */
     .card {
-      background: #16233d;
+      background: linear-gradient(145deg, #16233d, #0f1a2e);
       padding: 25px;
-      border-radius: 12px;
+      border-radius: 14px;
+      text-align: center;
+
+      position: relative;
+      overflow: hidden;
 
       opacity: 0;
       transform: translateY(60px);
-      transition: all 0.8s ease;
+      transition: all 0.3s ease;
     }
 
     .card.show {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    /* 3D HOVER */
+    .card:hover {
+      transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    }
+
+    /* LUZ PREMIUM */
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
+      transform: rotate(25deg);
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
     }
 
     footer {
@@ -152,19 +171,12 @@
       animation: pulse 2s infinite;
     }
 
-    /* ANIMACIONES */
-    @keyframes fadeUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     @keyframes pulse {
       0% { transform: scale(1); }
       50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
+
   </style>
 </head>
 
@@ -199,8 +211,6 @@
   <!-- SERVICIOS -->
   <section id="servicios">
 
-    <h2>Servicios</h2>
-
     <div class="services">
 
       <div class="card">💻 Soporte Técnico</div>
@@ -211,6 +221,7 @@
       <div class="card">⚙️ Automatización</div>
 
     </div>
+
   </section>
 
   <!-- FOOTER -->
@@ -221,7 +232,7 @@
   <!-- WHATSAPP FLOTANTE -->
   <a class="whatsapp-float" href="https://wa.me/525520692796">💬</a>
 
-  <!-- JS ANIMACIÓN SCROLL -->
+  <!-- SCROLL ANIMATION -->
   <script>
     const cards = document.querySelectorAll('.card');
 
@@ -231,13 +242,9 @@
           entry.target.classList.add('show');
         }
       });
-    }, {
-      threshold: 0.2
-    });
+    }, { threshold: 0.2 });
 
-    cards.forEach(card => {
-      observer.observe(card);
-    });
+    cards.forEach(card => observer.observe(card));
   </script>
 
 </body>
